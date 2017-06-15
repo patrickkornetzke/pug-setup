@@ -1,0 +1,21 @@
+{
+  "name": "pug-setup",
+  "description": "boiler plate with added goodies",
+  "main": "gulpfile.js",
+  "authors": [
+    "kornetzkep"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jade",
+    "gulp",
+    "pug",
+    "sass",
+    "browsersync"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1"
+  }
+}
