@@ -27,5 +27,8 @@
     "pug",
     "sass",
     "browsersync"
-  ]
+  ],
+  "dependencies": {
+    "compass-importer": "^0.4.1"
+  }
 }

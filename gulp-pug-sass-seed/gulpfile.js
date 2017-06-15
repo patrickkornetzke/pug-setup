@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   pug = require('gulp-pug'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
+  compass = require('compass-importer'),
   browserSync = require('browser-sync');
 
 /*
@@ -63,7 +64,8 @@ gulp.task('sass', function () {
   return gulp.src(paths.sass+ '/*.scss')
     .pipe(sass({
       includePaths: ['./bower_components/breakpoint-sass/stylesheets'],
-      outputStyle: 'compressed'
+      outputStyle: 'compressed',
+      importer: compass
     }))
     .on('error', sass.logError)
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
