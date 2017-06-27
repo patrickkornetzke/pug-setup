@@ -1,17 +1,18 @@
-@import "includes/base";
-@import "breakpoint";
-@import "compass/css3";
+@import "base/base-import";
 
-header {
-  h1 {
-    font-weight: 300;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 180px;
+html, body
+{
+    height: 100%;
+}
 
-    @include breakpoint(600px)
-    {
-    	color: blue;
-    }
-  }
+.site
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content
+{
+    flex: 1 0 auto; /* forces footer to bottom */
+    width: 100%;
 }
