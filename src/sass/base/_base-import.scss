@@ -8,3 +8,10 @@
 @import "typography";
 @import "variables";
 
+.centered-container
+{
+    padding: 1em;
+    margin: 0 auto;
+    max-width: $desktop;
+}
+

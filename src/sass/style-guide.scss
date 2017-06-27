@@ -1,0 +1,54 @@
+@import "base/base-import";
+
+.style-elements-list
+{
+    .element
+    {
+        width: 100%;
+        border-top: $border-primary;
+        padding: 2em 0;
+        
+        > *
+        {
+            margin-bottom: 1em;
+            display: block;
+        }
+
+        .name
+        {
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing-primary;
+            font-size: .8em;
+            color: #ccc;
+            margin-bottom: 2em;
+        }
+
+        .content
+        {
+            .info-text
+            {
+                margin-top: 2em;
+                color: #ccc;
+            }
+        }
+
+        @include breakpoint($tablet-vert)
+        {
+            display: table;
+
+            > *
+            {
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            .name
+            {
+                width: 20%;
+                padding-right: .25em;
+                line-height: 1.5em;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

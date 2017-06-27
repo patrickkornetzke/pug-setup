@@ -1,0 +1,36 @@
+extends _layouts/main
+
+append head
+    link(rel="stylesheet" href="/css/style-guide.css")
+
+block header
+    include _partials/header
+
+block content
+    div.centered-container
+        section.style-elements-section
+                h3.title Typography
+                ul.style-elements-list
+                    li.element
+                        span.name h1
+                        div.content
+                            h1 This is a headline
+                    li.element
+                        span.name h2
+                        div.content
+                            h2 This is another headline
+                    li.element
+                        span.name h3
+                        div.content
+                            h3 This is another headline
+                    li.element
+                        span.name body
+                        div.content
+                            p Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+                    li.element
+                        span.name a (link)
+                        div.content
+                            a(href='#') This is a link
+
+block footer
+    p This is the footer
