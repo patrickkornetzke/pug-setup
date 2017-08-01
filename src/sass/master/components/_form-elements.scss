@@ -1,0 +1,143 @@
+.form-group
+{
+    position: relative;
+    margin-bottom: 3em;
+    vertical-align:top;
+
+    label
+    {
+        font-size: .625em;
+        color: $color-form-label;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-secondary;
+        padding-left: 10px;
+        display: block;
+    }
+
+    input, .dropdown
+    {
+        border-radius: 0;
+        border: none;
+        border-bottom: $border-primary;
+        padding: .75em 10px;
+        font-size: 1.1em;
+        width: 100%;
+        cursor: text;
+        color: $color-text-primary;
+
+        &:focus
+        {
+            outline: 0;
+        }
+    }
+
+    .line-input
+    {
+        background: transparent;
+
+        width: 100%;
+        @include transition(border-color .25s ease-in-out);
+
+        &:focus
+        {
+            outline: 0;
+            border-color: $color-form-focus;
+        }
+
+        &.valid
+        {
+            border-color: $color-form-success;
+        }
+
+        &.error
+        {
+            border-color: $color-form-error;
+        }
+
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:   $grey-02;
+            font-weight: 300;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    $grey-02;
+            opacity:  1;
+            font-weight: 300;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    $grey-02;
+            opacity:  1;
+            font-weight: 300;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:    $grey-02;
+            font-weight: 300;
+        }
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color:    $grey-02;
+            font-weight: 300;
+        }
+    }
+
+    .inline-form-group &
+    {
+        @include breakpoint($tablet-vert)
+        {
+            display: inline-block;
+            width: calc(50% - .5em);
+
+            &:nth-child(even)
+            {
+                margin-left: .5em;
+            }
+            &:nth-child(odd)
+            {
+                margin-right: .5em;
+            }
+        }
+    }
+}
+
+.dropdown
+{
+    cursor: pointer;
+
+    &:hover
+    {
+        box-shadow: $box-shadow-primary;
+    }
+
+    &.focus
+    {
+        box-shadow: none;
+    }
+
+    &.open
+    {
+        box-shadow: $box-shadow-secondary;
+
+        > div
+        {
+            box-shadow: $box-shadow-secondary;
+        }
+    }
+
+    .selected
+    {
+        color: $grey-01;
+        padding: 0;
+        line-height: inherit;
+        font-size: inherit;
+        font-weight: bold;
+    }
+
+    li
+    {
+        color: $grey-01;
+
+        &.focus
+        {
+            background-color: $green-01;
+            color: white;
+        }
+    }
+}

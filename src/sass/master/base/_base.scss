@@ -1,0 +1,25 @@
+@import "breakpoint";
+@import "compass/css3";
+
+@import "breakpoints";
+@import "colors";
+@import "resets";
+@import "typography";
+@import "variables";
+
+html, body
+{
+    height: 100%;
+}
+
+.site
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content
+{
+    flex: 1 0 auto; /* forces footer to bottom */
+    width: 100%;
+}

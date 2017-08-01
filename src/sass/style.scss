@@ -1,18 +1,6 @@
-@import "base/base-import";
-
-html, body
-{
-    height: 100%;
-}
-
-.site
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.site-content
-{
-    flex: 1 0 auto; /* forces footer to bottom */
-    width: 100%;
-}
+@import "master/base/base";
+@import "master/mixins/mixins-global";
+@import "master/mixins/mixins-flexbox";
+@import "master/components/buttons";
+@import "master/components/containers";
+@import "master/components/form-elements";

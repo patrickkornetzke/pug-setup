@@ -1,0 +1,70 @@
+.btn-container
+{
+    width: 100%;
+    text-align: center;
+}
+
+.btn
+{
+    box-shadow: $box-shadow-primary;
+    @include transition(all .25s ease-in-out);
+    display: inline-block;
+    padding: .5em 1em;
+    color: white;
+
+    + .btn
+    {
+        margin-left: 1em;
+    }
+
+    &.btn-primary
+    {
+        background-color: $color-btn-primary;
+
+        &:hover
+        {
+            background-color: lighten($color-btn-primary, 3%);
+        }
+    }
+
+    .icon-container
+    {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: .5em;
+        line-height: 1em;
+
+        i
+        {
+            line-height: 1.33em;
+        }
+    }
+
+    .btn-text
+    {
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-secondary;
+        line-height: 2em;
+    }
+
+    &:hover
+    {
+        box-shadow: $box-shadow-secondary;
+    }
+
+    &.btn-sm
+    {
+        padding: .25em 1.75em;
+        font-size: .6em;
+    }
+
+    &.btn-lg
+    {
+        padding: 1em 1.5em;
+        font-size: 1.1em;
+    }
+}

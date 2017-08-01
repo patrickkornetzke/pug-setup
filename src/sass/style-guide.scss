@@ -1,4 +1,19 @@
-@import "base/base-import";
+@import "master/base/base";
+
+.style-elements-section
+{
+    margin-bottom: 2em;
+
+    > .title
+    {
+        margin-bottom: 1em;
+    }
+
+    & + .style-elements-section
+    {
+        margin-top: 4em;
+    }
+}
 
 .style-elements-list
 {

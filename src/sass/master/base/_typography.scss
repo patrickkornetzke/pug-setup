@@ -1,0 +1,54 @@
+/* -- FONT INCLUDES -- */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+$font-family-primary:       "Raleway", "Helvetica", sans-serif;
+$font-family-secondary:     "Raleway", "Helvetica", sans-serif;
+
+$letter-spacing-primary:            .05em;
+$letter-spacing-secondary:          .1em;
+
+body {
+    font-family: $font-family-primary;
+    font-size: 16px;
+    color: $color-text-primary;
+}
+
+h1
+{
+    font-size: 2em;
+    @include breakpoint($tablet-vert)
+    {
+        font-size: 3em;
+    }
+    @include breakpoint($desktop)
+    {
+        font-size: 3.5em;
+    }
+}
+
+h2
+{
+    font-size: 2.5em;
+}
+
+h3
+{
+    font-size: 1.2em;
+    @include breakpoint($tablet-vert)
+    {
+        font-size: 1.5em;
+    }
+}
+
+p
+{
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+
+a
+{
+    color: $color-link-primary;
+}
