@@ -1,3 +1,12 @@
+@mixin vertical-align()
+{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 @mixin absolute-center()
 {
     position: absolute;
@@ -10,4 +19,88 @@
     max-width: 100%;
     max-height: 100%;
     margin: auto;
+}
+
+@mixin bkgd-img($image-url, $fallback-color)
+{
+    background: $fallback-color url($image-url) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;    
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin bkgd-gradient($color1, $color2)
+{
+    background-color: $color1;
+    @include filter-gradient($color1, $color2, horizontal); // IE6-9 fallback
+    @include background-image(linear-gradient(to right top, $color1, $color2));
+}
+
+@mixin banner-wrapper($height)
+{
+    min-height: $height;
+    width: 100%;
+    position: relative;
+    @include flexbox-display;
+    @include flexbox-vertical-center;
+
+    .container
+    {
+        width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+        position: relative;
+        max-width: $desktop;
+        @include breakpoint($mobile-vert) 
+        {
+            padding: 3em 2em;
+        }
+
+        .text-wrapper 
+        {
+            text-align: center;
+            max-width: 50em;
+            margin: 0 auto;
+            color: white;
+
+            h1
+            {
+                margin-bottom: .5em;
+            }
+        }
+
+        &.fluid
+        {
+            max-width: 100%;
+        }
+    }
+
+
+    &.vertical-align
+    {
+        height: $height;
+
+        .container
+        {
+            @include vertical-align;
+        }
+    }
+
+    &.bkgd-blank
+    {
+        h1, h2, h3, p
+        {
+            color: $color-text-primary;
+        }
+    }
+}
+
+@mixin transition($transition)
+{
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
 }

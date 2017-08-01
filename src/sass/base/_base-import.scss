@@ -4,6 +4,7 @@
 @import "breakpoints";
 @import "colors";
 @import "mixins/mixins-global";
+@import "mixins/mixins-flexbox";
 @import "resets";
 @import "typography";
 @import "variables";
@@ -14,4 +15,3 @@
     margin: 0 auto;
     max-width: $desktop;
 }
-
