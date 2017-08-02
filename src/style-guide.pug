@@ -32,6 +32,23 @@ block content
                     div.content
                         a(href='#') This is a link
         section.style-elements-section
+            h3.title Form Elements
+            ul.style-elements-list
+                li.element
+                    span.name Dropdown
+                    div.content
+                        div.form-group
+                            label(for="payment-method") Payment Method
+                            select#payment-method.dropdown(jq-drop-down)
+                                option(class="label") Select Payment
+                                option(value="test") MasterCard
+                                option(value="this") Visa
+                                option(value="thaz") American Express
+                                option(value="thaz") Paypal
+                        div.inline-icon-wrapper.info-text
+                            i.ic-info
+                            span Dropdowns are set up using the plugin #[a(href='http://www.jqueryscript.net/demo/Easy-jQuery-Based-Drop-Down-Builder-EasyDropDown/' target="_blank") EasyDropDown ] plugin.
+        section.style-elements-section
             h3.title Buttons
             ul.style-elements-list
                 li.element
