@@ -8,7 +8,11 @@ var gulp = require('gulp'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   compass = require('compass-importer'),
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync'),
+  concat = require('gulp-concat'),
+  rename = require('gulp-rename'),
+  uglify = require('gulp-uglify'),
+  minifyCSS = require('gulp-minify-css');
 
 /*
  * Directories here
@@ -17,8 +21,34 @@ var paths = {
   public: './public/',
   sass: './src/sass/',
   css: './public/css/',
-  data: './src/_data/'
+  data: './src/_data/',
+  libs: './public/libs/'
 };
+
+// Include plugins
+var plugins = require("gulp-load-plugins")({
+  pattern: ['gulp-*', 'gulp.*'],
+  replaceString: /\bgulp[\-.]/
+});
+
+// Concatenate & Minify Bower Component JS
+gulp.task('js', function() {
+    return gulp.src(paths.libs + '*/*.js')
+      .pipe(plugins.concat('bower-components.js'))
+      .pipe(plugins.rename({suffix: '.min'}))
+      .pipe(plugins.uglify())
+      .pipe(gulp.dest(paths.public + 'js'));
+});
+
+// Concatenate & Minify Bower Component CSS
+gulp.task('css', function() {
+    return gulp.src(paths.libs + '*/*.css')
+      .pipe(minifyCSS())
+      .pipe(plugins.rename({suffix: '.min'}))
+      .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+      .pipe(plugins.concat('bower-components.css'))
+      .pipe(gulp.dest(paths.public + 'css'));
+});
 
 /**
  * Compile .pug files and pass in data from json file

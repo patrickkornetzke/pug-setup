@@ -22,7 +22,8 @@
   "install": {
     "path": "public/libs",
     "sources": {
-            "easydropdown": "bower_components/easydropdown/themes/easydropdown.css"
-        }
+      "easydropdown": "bower_components/easydropdown/themes/easydropdown.css",
+      "easydropdown": "bower_components/easydropdown/jquery.easydropdown.min.js"
+    }
   }
 }
