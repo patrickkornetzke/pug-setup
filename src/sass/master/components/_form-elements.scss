@@ -55,25 +55,25 @@
         }
 
         &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-            color:   $grey-02;
+            color: $color-form-placeholder;
             font-weight: 300;
         }
         &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color:    $grey-02;
-            opacity:  1;
+            color: $color-form-placeholder;
+            opacity: 1;
             font-weight: 300;
         }
         &::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color:    $grey-02;
-            opacity:  1;
+            color: $color-form-placeholder;
+            opacity: 1;
             font-weight: 300;
         }
         &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color:    $grey-02;
+            color: $color-form-placeholder;
             font-weight: 300;
         }
         &::-ms-input-placeholder { /* Microsoft Edge */
-            color:    $grey-02;
+            color: $color-form-placeholder;
             font-weight: 300;
         }
     }
@@ -123,7 +123,7 @@
 
     .selected
     {
-        color: $grey-01;
+        color: $color-form-filled;
         padding: 0;
         line-height: inherit;
         font-size: inherit;
@@ -132,12 +132,12 @@
 
     li
     {
-        color: $grey-01;
+        color: $color-form-filled;
 
         &.focus
         {
-            background-color: $green-01;
-            color: white;
+            background-color: $color-dropdown-bkgd-hover;
+            color: $color-dropdown-item;
         }
     }
 }

@@ -8,7 +8,7 @@ $font-family-secondary:     "Raleway", "Helvetica", sans-serif;
 $letter-spacing-primary:            .05em;
 $letter-spacing-secondary:          .1em;
 
-body {
+html, body {
     font-family: $font-family-primary;
     font-size: 16px;
     color: $color-text-primary;
@@ -47,8 +47,22 @@ p
     line-height: 1.5;
 }
 
-
 a
 {
     color: $color-link-primary;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover, &:focus
+    {
+        color: $color-text-primary;
+        text-decoration: none;
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+    }
+}
+
+i
+{
+    font-size: 1.5em;
 }
