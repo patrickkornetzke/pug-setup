@@ -18,7 +18,7 @@
         display: flex;
         @include flex-direction(column);
         vertical-align: top;
-        color: $color-border-primary;
+        color: $color-text-primary;
         position: relative;
         background-color: $color-bkgd-primary;
         z-index: 0;
