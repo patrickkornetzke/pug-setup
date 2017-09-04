@@ -1,0 +1,72 @@
+.cards
+{
+    @include flexbox-display;
+    @include flexbox-flow(row wrap);
+    @include flexbox-justify-left;
+    margin-top: -1px;
+    margin-left: -1px;
+
+    .card
+    {
+        width: 100%;
+        padding: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        outline: 1px solid $grey-02;
+        margin-top: 1px;
+        margin-left: 1px;
+        display: flex;
+        @include flex-direction(column);
+        vertical-align: top;
+        color: $color-border-primary;
+        position: relative;
+        background-color: $color-bkgd-primary;
+        z-index: 0;
+        cursor:pointer;
+
+        @include breakpoint($tablet-vert)
+        {
+            width: 33%;
+
+            &:hover
+            {
+                @include transition(all .25s ease-in-out);
+                box-shadow: $box-shadow-secondary;
+                border: none;
+                transform: scale(1.05);
+                z-index: 1;
+            }
+        }
+
+        .img-container
+        {
+            height: 7em;
+            position: relative;
+            margin: initial;
+            margin-bottom: 1em;
+
+            img
+            {
+                @include absolute-center;
+                margin: auto auto 0;
+            }
+        }
+
+        .name
+        {
+            text-transform: capitalize;
+            margin-bottom: .5em;
+            font-size: 1.3em;
+        }
+
+        .btn-container
+        {
+            margin-bottom:2em;
+        }
+
+        .footer
+        {
+            margin-top: auto;
+        }
+    }
+}
