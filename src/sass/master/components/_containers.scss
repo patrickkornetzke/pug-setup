@@ -53,13 +53,50 @@
     }
 }
 
-.banner-wrapper
+.full-height-container
 {
-    @include banner-wrapper(100vh);
+    width: 100%;
+    position: relative;
+    @include flexbox-display;
+    @include flexbox-vertical-center;
 
-    &.half-screen
+    .container
     {
-        @include banner-wrapper(50vh);
+        width: 100%;
+        padding: 6em 1em;
+        margin: 0 auto;
+        position: relative;
+
+        .text-wrapper 
+        {
+            text-align: center;
+            max-width: 50em;
+            margin: 0 auto;
+            color: white;
+
+            h1
+            {
+                margin-bottom: .5em;
+            }
+        }
+    }
+
+    &.bkgd-blank
+    {
+        h1, h2, h3, p
+        {
+            color: $color-text-primary;
+        }
+    }
+
+    &.bkgd-grey
+    {
+        background-color: $grey-01;
+    }
+
+    @include breakpoint($tablet-hor)
+    {
+        min-height: 100vh;
     }
 }
 
