@@ -12,9 +12,16 @@ $grey-04:                               #eeeeee;
 
 // Colors By Use
 $t-color-text-primary:                  $grey-01;
-$t-color-btn-primary:                   $blue-01;
-$t-color-btn-text-hover:                white;
-$t-color-btn-text-focus:                white;
+
+// Button, Primary Temp
+$t-btn-primary-bkgd:                    $blue-01;
+$t-btn-primary-border:                  $blue-01;
+$t-btn-primary-color:                   white;
+
+// Button, Secondary Temp
+$t-btn-secondary-bkgd:                  white;
+$t-btn-secondary-border:                $grey-01;
+$t-btn-secondary-color:                 $grey-01;
 
 $t-color-link-primary:                  $blue-01;
 $t-color-border-primary:                $grey-02;
@@ -39,9 +46,14 @@ $t-color-bkgd-primary:                  $grey-03;
 // Assign Final Variables
 $color-text-primary:                    $t-color-text-primary;
 
-$color-btn-primary:                     $t-color-btn-primary;
-$color-btn-text-hover:                  $t-color-btn-text-hover;
-$color-btn-text-focus:                  $t-color-btn-text-focus;
+$btn-primary-color:                     $t-btn-primary-color;
+$btn-primary-bkgd:                      $t-btn-primary-bkgd;
+$btn-primary-border:                    $t-btn-primary-border;
+
+$btn-secondary-color:                   $t-btn-secondary-color;
+$btn-secondary-bkgd:                    $t-btn-secondary-bkgd;
+$btn-secondary-border:                  $t-btn-secondary-border;
+
 
 $color-link-primary:                    $t-color-link-primary;
 
@@ -65,8 +77,8 @@ $t-font-family-primary:                 "Open Sans", "Helvetica", sans-serif;
 $t-font-family-secondary:               "Raleway", "Helvetica", sans-serif;
 
 // Letter Spacing
-$t-letter-spacing-primary:                .05em;
-$t-letter-spacing-secondary:              .1em;
+$t-letter-spacing-primary:              .05em;
+$t-letter-spacing-secondary:            .1em;
 
 // Overrides (From Site)
 @import "../../site/base/typography";
