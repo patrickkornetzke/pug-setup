@@ -37,7 +37,10 @@ $t-color-dropdown-item:                 white;
 
 $t-color-bkgd-img-fallback:             $grey-01;
 
-$t-color-bkgd-primary:                  $grey-03;
+// Cards
+$t-card-primary-bkgd:                   white;
+$t-card-primary-border:                 $grey-02;
+$t-card-primary-color:                  $t-color-text-primary;
 
 
 // Overrides (From Site)
@@ -68,7 +71,9 @@ $color-dropdown-item:                   $t-color-dropdown-item;
 
 $color-bkgd-img-fallback:               $t-color-bkgd-img-fallback;
 
-$color-bkgd-primary:                    $t-color-bkgd-primary;
+$card-primary-bkgd:                     $t-card-primary-bkgd;
+$card-primary-border:                   $t-card-primary-border;
+$card-primary-color:                    $t-card-primary-color;
 
 //----- TYPOGRAPHY -----/
 

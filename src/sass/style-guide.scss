@@ -29,7 +29,7 @@
             display: block;
         }
 
-        .name
+        > .name
         {
             text-transform: uppercase;
             letter-spacing: $letter-spacing-primary;
@@ -57,13 +57,24 @@
                 vertical-align: top;
             }
 
-            .name
+            > .name
             {
                 width: 20%;
                 padding-right: .25em;
                 line-height: 1.5em;
                 padding-bottom: 0;
             }
+        }
+    }
+
+    .card
+    {
+        .img-container
+        {
+            background-color: $grey-03;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

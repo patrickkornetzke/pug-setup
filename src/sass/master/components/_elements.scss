@@ -9,33 +9,27 @@
     .card
     {
         width: 100%;
-        padding: 2em;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         text-align: center;
-        outline: 1px solid $grey-02;
+        outline: 1px solid $card-primary-border;
         margin-top: 1px;
         margin-left: 1px;
         display: flex;
         @include flex-direction(column);
         vertical-align: top;
-        color: $color-text-primary;
+        color: $card-primary-color;
         position: relative;
-        background-color: $color-bkgd-primary;
+        background-color: $card-primary-bkgd;
         z-index: 0;
-        cursor:pointer;
 
         @include breakpoint($tablet-vert)
         {
             width: 33%;
+        }
 
-            &:hover
-            {
-                @include transition(all .25s ease-in-out);
-                box-shadow: $box-shadow-secondary;
-                border: none;
-                transform: scale(1.05);
-                z-index: 1;
-            }
+        .wrapper
+        {
+            padding: 2em;
         }
 
         .img-container
@@ -43,7 +37,7 @@
             height: 7em;
             position: relative;
             margin: initial;
-            margin-bottom: 1em;
+            margin-bottom: 2em;
 
             img
             {
@@ -55,13 +49,15 @@
         .name
         {
             text-transform: capitalize;
-            margin-bottom: .5em;
+            margin-bottom: 1em;
             font-size: 1.3em;
         }
 
-        .btn-container
+        .description
         {
-            margin-bottom:2em;
+            text-align: left;
+            margin-bottom: 2em;
+            font-size: .9em;
         }
 
         .footer
