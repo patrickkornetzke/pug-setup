@@ -1,22 +1,18 @@
 @import "breakpoint";
 @import "compass/css3";
 
-@import "breakpoints";
-@import "colors";
 @import "normalize";
 @import "resets";
-@import "typography";
-@import "variables";
 
-html, body
-{
-    height: 100%;
-}
+@import "variables";
+@import "breakpoints";
+@import "typography";
 
 .site
 {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .site-content

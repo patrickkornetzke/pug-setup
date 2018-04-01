@@ -17,6 +17,10 @@ This project uses...
 
 ### To run
 - Execute `npm install` from this directory to install dev dependencies.
+- Execute `bower install` to install frontend dependencies
+- Execute `bower-installer` to grab only necessary bower files (css, js) and add them to "libs" directory. To manually add files, add to "sources{}" inside "bower.json"
+- Execute `gulp js` to concatenate and minify js from "libs" folder into one file ("bower-components.min.js")
+- Execute `gulp css` to concatenate and minify css from "libs" folder into one file ("bower-components.min.css")
 - Execute `gulp` to run all tasks, launch the browser sync local server and watch for changes.
 
 [travis-url]: https://travis-ci.org/azemoh/gulp-pug-sass-seed

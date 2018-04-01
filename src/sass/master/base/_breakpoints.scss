@@ -2,10 +2,10 @@
 
 @include breakpoint-set('to ems', true);
 
-// device-specific
 $mobile-hor:    480px;
 $mobile-vert:   600px;
 $tablet-vert:   768px;
-$tablet-hor:    992px;
-$desktop:       1140px;
-$desktop-lg:    1450px;
+$tablet-hor:    1024px;
+$desktop:       1200px;
+
+@import "../../site/base/breakpoints";

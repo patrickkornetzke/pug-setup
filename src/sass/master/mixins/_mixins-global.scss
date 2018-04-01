@@ -37,65 +37,6 @@
     @include background-image(linear-gradient(to right top, $color1, $color2));
 }
 
-@mixin banner-wrapper($height)
-{
-    min-height: $height;
-    width: 100%;
-    position: relative;
-    @include flexbox-display;
-    @include flexbox-vertical-center;
-
-    .container
-    {
-        width: 100%;
-        padding: 1em;
-        margin: 0 auto;
-        position: relative;
-        max-width: $desktop;
-        @include breakpoint($mobile-vert) 
-        {
-            padding: 3em 2em;
-        }
-
-        .text-wrapper 
-        {
-            text-align: center;
-            max-width: 50em;
-            margin: 0 auto;
-            color: white;
-
-            h1
-            {
-                margin-bottom: .5em;
-            }
-        }
-
-        &.fluid
-        {
-            max-width: 100%;
-        }
-    }
-
-
-    &.vertical-align
-    {
-        height: $height;
-
-        .container
-        {
-            @include vertical-align;
-        }
-    }
-
-    &.bkgd-blank
-    {
-        h1, h2, h3, p
-        {
-            color: $color-text-primary;
-        }
-    }
-}
-
 @mixin transition($transition)
 {
     -webkit-transition: $transition;
@@ -104,3 +45,5 @@
     -o-transition: $transition;
     transition: $transition;
 }
+
+@import "../../site/mixins/mixins-global";

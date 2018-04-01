@@ -1,5 +1,104 @@
+
+// ------ COLORS -----/
+
+// Base Colors
+$green-01:                              #2ecc71;
+$red-01:                                #e74c3c;
+$blue-01:                               #3498db;
+$grey-01:                               #4d4d4d;
+$grey-02:                               #cccccc;
+$grey-03:                               #f2f2f2;
+$grey-04:                               #eeeeee;
+
+// Colors By Use
+$t-color-text-primary:                  $grey-01;
+
+// Button, Primary Temp
+$t-btn-primary-bkgd:                    $blue-01;
+$t-btn-primary-border:                  $blue-01;
+$t-btn-primary-color:                   white;
+
+// Button, Secondary Temp
+$t-btn-secondary-bkgd:                  white;
+$t-btn-secondary-border:                $grey-01;
+$t-btn-secondary-color:                 $grey-01;
+
+$t-color-link-primary:                  $blue-01;
+$t-color-border-primary:                $grey-02;
+
+$t-color-form-label:                    $grey-01;
+$t-color-form-success:                  $green-01;
+$t-color-form-error:                    $red-01;
+$t-color-form-focus:                    $blue-01;
+$t-color-form-filled:                   $grey-01;
+$t-color-form-placeholder:              $grey-02;
+$t-color-dropdown-bkgd-hover:           $green-01;
+$t-color-dropdown-item:                 white;
+
+$t-color-bkgd-img-fallback:             $grey-01;
+
+// Cards
+$t-card-primary-bkgd:                   white;
+$t-card-primary-border:                 $grey-02;
+$t-card-primary-color:                  $t-color-text-primary;
+
+
+// Overrides (From Site)
+@import "../../site/base/colors";
+
+// Assign Final Variables
+$color-text-primary:                    $t-color-text-primary;
+
+$btn-primary-color:                     $t-btn-primary-color;
+$btn-primary-bkgd:                      $t-btn-primary-bkgd;
+$btn-primary-border:                    $t-btn-primary-border;
+
+$btn-secondary-color:                   $t-btn-secondary-color;
+$btn-secondary-bkgd:                    $t-btn-secondary-bkgd;
+$btn-secondary-border:                  $t-btn-secondary-border;
+
+
+$color-link-primary:                    $t-color-link-primary;
+
+$color-form-label:                      $t-color-form-label;
+$color-form-success:                    $t-color-form-success;
+$color-form-error:                      $t-color-form-error;
+$color-form-focus:                      $t-color-form-focus;
+$color-form-filled:                     $t-color-form-filled;
+$color-form-placeholder:                $t-color-form-placeholder;
+$color-dropdown-bkgd-hover:             $t-color-dropdown-bkgd-hover;
+$color-dropdown-item:                   $t-color-dropdown-item;
+
+$color-bkgd-img-fallback:               $t-color-bkgd-img-fallback;
+
+$card-primary-bkgd:                     $t-card-primary-bkgd;
+$card-primary-border:                   $t-card-primary-border;
+$card-primary-color:                    $t-card-primary-color;
+
+//----- TYPOGRAPHY -----/
+
+// Base Fonts
+$t-font-family-primary:                 "Open Sans", "Helvetica", sans-serif;
+$t-font-family-secondary:               "Raleway", "Helvetica", sans-serif;
+
+// Letter Spacing
+$t-letter-spacing-primary:              .05em;
+$t-letter-spacing-secondary:            .1em;
+
+// Overrides (From Site)
+@import "../../site/base/typography";
+
+// Assign Final Variables
+$font-family-primary:                   $t-font-family-primary;
+$font-family-secondary:                 $t-font-family-secondary;
+
+$letter-spacing-primary:                $t-letter-spacing-primary;
+$letter-spacing-secondary:              $t-letter-spacing-secondary;
+
+//----- ELEMENTS -----/
+
 // borders
-$border-primary: 1px solid $color-border-primary;
+$border-primary: 1px solid              $t-color-border-primary;
 
 // box shadows
 $box-shadow-primary: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

@@ -10,7 +10,8 @@
     @include transition(all .25s ease-in-out);
     display: inline-block;
     padding: .5em 1em;
-    color: white;
+    border-radius: 4px;
+    margin-bottom: 1em;
 
     + .btn
     {
@@ -19,12 +20,34 @@
 
     &.btn-primary
     {
-        background-color: $color-btn-primary;
+        color: $btn-primary-color;
+        background-color: $btn-primary-bkgd;
+        border: 1px solid $btn-primary-border;
 
         &:hover
         {
-            background-color: lighten($color-btn-primary, 3%);
+            background-color: lighten($btn-primary-bkgd, 3%);
+            border-color: lighten($btn-primary-border, 3%);
         }
+    }
+
+    &.btn-secondary
+    {
+        color: $btn-secondary-color;
+        background-color: $btn-secondary-bkgd;
+        border: 1px solid $btn-secondary-border;
+
+        &:hover
+        {
+            background-color: lighten($btn-secondary-bkgd, 3%);
+            border-color: lighten($btn-secondary-border, 3%);
+        }
+    }
+
+    &.btn-block
+    {
+        width: 100%;
+        display: block;
     }
 
     .icon-container
@@ -51,11 +74,6 @@
         line-height: 2em;
     }
 
-    &:hover
-    {
-        box-shadow: $box-shadow-secondary;
-    }
-
     &.btn-sm
     {
         padding: .25em 1.75em;
@@ -68,3 +86,5 @@
         font-size: 1.1em;
     }
 }
+
+@import "../../site/components/buttons";

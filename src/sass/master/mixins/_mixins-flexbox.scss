@@ -55,3 +55,12 @@
     -ms-flex-flow: $direction;
     flex-flow: $direction;
 }
+
+@mixin flexbox-grow($number)
+{
+    -webkit-box-flex: $number;
+    -ms-flex-positive: $number;
+    flex-grow: $number;
+}
+
+@import "../../site/mixins/mixins-flexbox";
